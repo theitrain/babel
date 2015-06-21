@@ -1,7 +1,7 @@
 # Babel
-### a simple script to automate variable assignment in AMPscript, made specifically for translation strings from an Excel spreadsheet
+### A simple script to automate variable assignment in AMPscript, made specifically for translation strings from an Excel spreadsheet
 
-Dependencies: [XLRD](http://www.python-excel.org/)
+#### Dependencies: [XLRD](http://www.python-excel.org/)
 
 #### Installation:
 
