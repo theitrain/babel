@@ -10,7 +10,7 @@ if commandArgs < 2:
 	sys.exit()
 else:
 	readName = sys.argv[1] + ".xlsx"
-	fileName = "./output" + sys.argv[1] + ".amp"
+	fileName = "./output/" + sys.argv[1] + ".amp"
 
 	from xlrd import open_workbook
 	wb = open_workbook(readName)
@@ -51,7 +51,7 @@ else:
 		 			# Assign it to an ampscript variable
 		 			variableName = sheet.cell(row, 0).value
 
-		 			# Escape any quotes in the value ("Traveler's Choice" causes all types of issues)
+		 			# Escape any quotes in the value
 		 			variableValue = sheet.cell(row,col).value.replace('\"', '"""')
 
 			 		target.write( '\t Set @' + variableName + ' = "' + variableValue.encode('utf8').decode('utf8') +'"\n')
@@ -67,7 +67,7 @@ else:
 		 	# Assign it to an ampscript variable
 		 	variableName = sheet.cell(row, 0).value
 
-		 	# Escape any quotes in the value ("Traveler's Choice" causes all types of issues)
+		 	# Escape any quotes in the value
 		 	variableValue = sheet.cell(row,1).value.replace('\"', '"""')		
 
 			target.write( '\t Set @' + variableName + ' = "' + variableValue +'"\n')
